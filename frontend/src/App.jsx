@@ -6,21 +6,21 @@ function App() {
   const [quote, setQuote] = useState('');
   const [quotes, setQuotes] = useState([]);
 
-  const fetchQuotes = async () => {
+  const fetchQuotes = async () => {                                 // getting all the quotes from server
     const res = await axios.get('http://localhost:5000/quotes');
     console.log('result is ',res);
     
     setQuotes(res.data);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {                                   
     e.preventDefault();
-    await axios.post('http://localhost:5000/quotes', { text: quote });
+    await axios.post('http://localhost:5000/quotes', { text: quote });   // posting a quote to server
     setQuote('');
     fetchQuotes();
   };
 
-  useEffect(() => {
+  useEffect(() => {                // invoked all times when statechange occures or event happens
     fetchQuotes();
   }, []);
 
@@ -34,7 +34,7 @@ function App() {
         <input
           className="input"
           value={quote}
-          onChange={(e) => setQuote(e.target.value)}
+          onChange={(e) => setQuote(e.target.value)}          // we type anything and is updated to quote        
           placeholder="Enter a quote"
         />
         <button className="button" type="submit">Save Quote</button>

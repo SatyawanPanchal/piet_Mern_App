@@ -1,4 +1,4 @@
-// backend/server.mjs or server.js (with "type": "module" in package.json)
+// backend/server.js (with "type": "module" in package.json)
 
 import express from 'express';
 import mongoose from 'mongoose';
@@ -17,7 +17,7 @@ const quoteSchema = new mongoose.Schema({ text: String });     //Defines a schem
 const Quote = mongoose.model('Quote', quoteSchema);            //lets you interact with the quotes collection in MongoDB (like insert, find, etc.).
 
 
-app.post('/quotes', async (req, res) => {
+app.get('/quotes', async (req, res) => {
   const quotes = await Quote.find();          //Finds all quotes in the database using Quote.find().
   res.json(quotes);                           //Sends them back as a JSON response
 });

@@ -16,9 +16,7 @@ body, html {
 }
 
 /* Main container */
-.container {
-   
-  
+.container {  
   background: white;
   padding: 40px 40px;
   margin: auto 500px;
@@ -87,3 +85,4 @@ body, html {
   margin-bottom: 10px;
   font-size: 1.1rem;
 }
+
