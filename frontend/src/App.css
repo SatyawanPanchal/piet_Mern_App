@@ -1,0 +1,89 @@
+/* Fullscreen gradient background */
+body, html {
+ 
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #fceabb, #f8b500);
+}
+
+/* Wrapper to center content */
+.wrapper {
+  display: flex;
+ 
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 100% of viewport height */
+}
+
+/* Main container */
+.container {
+   
+  
+  background: white;
+  padding: 40px 40px;
+  margin: auto 500px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Form layout */
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s ease;
+}
+
+.input:focus {
+  border-color: #f8b500;
+  outline: none;
+}
+
+.button {
+  background: #f8b500;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #d89c00;
+}
+
+/* Quote List */
+.quote-list {
+  list-style: none;
+  padding: 0;
+  color: red;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.quote-item {
+  background: #fff8e1;
+  padding: 12px 15px;
+  border-left: 5px solid #f8b500;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
